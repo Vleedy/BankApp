@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/BankApp/static/css/main.5e31372d.css",
+    "main.js": "/BankApp/static/js/main.38740ab5.js",
+    "static/media/creditBack.jpg": "/BankApp/static/media/creditBack.416be55544b40ce49104.jpg",
+    "index.html": "/BankApp/index.html",
+    "main.5e31372d.css.map": "/BankApp/static/css/main.5e31372d.css.map",
+    "main.38740ab5.js.map": "/BankApp/static/js/main.38740ab5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e31372d.css",
+    "static/js/main.38740ab5.js"
+  ]
+}
