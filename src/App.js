@@ -1,5 +1,5 @@
 import { Routes, Route} from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { MainConverter } from './components/MainConverter/MainConverter';
 import  Header from './components/Header/Header';
 import { MainPage } from './components/MainPage/MainPage';
@@ -14,9 +14,7 @@ import './App.sass';
 
 
 function App() {
-  const [number, setNumber] = useState('');
-  const [numb, setNumb] = useState('');
-  useEffect(()=>setNumb(()=>window.location.href.split('=')[1]), [number])
+  const [number, setNumber] = useState('');  /* Стейт для получения id новсти при нажатии на неё (mainpage, mainconverter, news)*/
   return (  
     <>
       <Header/>
@@ -26,7 +24,7 @@ function App() {
         <Route path='/BankApp/departments' element={<Departments/>}/>
         <Route path='/BankApp/atms' element={<Atms/>}/>
         <Route path='/BankApp/news' element={<NewsPage setNumber={setNumber}/>}/>
-        <Route path={`/BankApp/news:id=${numb}`} element={<SeparateNews num={numb}/>}/>
+        <Route path={`/BankApp/news/page${number}`} element={<SeparateNews num={number}/>}/>
       </Routes>
     </>
   );

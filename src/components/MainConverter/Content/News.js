@@ -8,9 +8,9 @@ import './News.sass';
 
 
 export function News ({width, setNumber}) {
-    const [news, setNews] = useState([]);
+    const [news, setNews] = useState([]);     /*Полученный с сервера массив новостей*/
     const [isLoading, setIsLoading] = useState(true);
-    const [random, setRandom] = useState(0);
+    const [random, setRandom] = useState(0);   /*стейт для рандомного id новости*/
     
     async function getNewsInfo() {
         const resp = await  newsInfo.getNewsInfo();
@@ -31,7 +31,8 @@ export function News ({width, setNumber}) {
                 <CircularProgress color="primary" style={{margin: '95px auto'}}/> 
             </ThemeProvider>
             : 
-            <Link onClick={()=>setNumber(random)}  style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news:id=${random}`}>
+            <Link onClick={()=>setNumber(random)}  style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news/page${random}`}>
+                {/*Кладём id новости в стейт(App) при клике на новость)*/}
                 <div className="news">
                     <h3>{news.length>0&&news[random].name_ru}</h3>
                     <img className="news-img" src={news[random].img} alt="news-img"/>

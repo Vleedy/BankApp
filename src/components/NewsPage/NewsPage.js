@@ -20,7 +20,7 @@ export function NewsPage ({setNumber}) {
     }
 
     function getDocHeight() {
-        var D = document;
+        let D = document;
         return Math.max(
             D.body.scrollHeight, D.documentElement.scrollHeight,
             D.body.offsetHeight, D.documentElement.offsetHeight,
@@ -28,7 +28,9 @@ export function NewsPage ({setNumber}) {
         );
     }
 
-    useEffect(()=>getNews, []);
+    useEffect(()=>{
+        getNews();
+    }, []);
 
     useEffect(()=>window.scrollTo({
         top: getDocHeight(),
@@ -51,7 +53,7 @@ export function NewsPage ({setNumber}) {
             news.map((item, i)=>{
             if (i<quantity) {
                 return ( 
-                <Link key={i} onClick={()=>setNumber(i)} style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news:id=${i}`}>
+                <Link key={i} onClick={()=>setNumber(i)} style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news/page${i}`}>
                     <div className='news_item'>
                         <img className='news_image' src={item.img} alt="news-img"/>
                         <h2>{item.name_ru}</h2>
@@ -60,7 +62,7 @@ export function NewsPage ({setNumber}) {
                 )
             }
             })}
-            {!isLoading&&<Button variant="outlined" onClick={()=>onBtnMoreNews()} 
+            {!isLoading&&<Button variant="outlined" disabled={quantity>21 && true} onClick={()=>onBtnMoreNews()} 
             sx={{width: '120px', borderColor: 'white', color: 'white', fontWeight: '300', '&:hover': {
             borderColor: 'white',
             backgroundColor: '#ffffff59',

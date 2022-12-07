@@ -7,7 +7,7 @@ import { getCityDepartments } from "../../service/filter";
 import './Atms.sass'
 
 
-export function Atms () {
+export function Atms () {          /*Принцип работы такой же как и для отделений*/
     const [atms, setAtms] = useState([]);
     const [selectedCity, setSelectedCity] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -24,10 +24,12 @@ export function Atms () {
 
     const getAtmsInfo = async () => {
         const resp = await atmsInfo.getAtmsInfo();
+        !Array.isArray(resp)&&alert('Возникла ошибка при загрузке данных с сервера');
         const changeResp = await changeAtms(resp);
         setAtms(changeResp);
         setIsLoading(false);
     };
+    
     useEffect(()=> {
         getAtmsInfo();
     }, []);

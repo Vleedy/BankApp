@@ -10,12 +10,16 @@ export function SeparateNews({num}) {
     const [news, setNews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const getNewsInfo = async () => {
+    async function getNewsData() {
         const result = await newsInfo.getNewsInfo();
-        setNews(result);
-        setIsLoading(false);
+        if (Array.isArray(result)) {
+            setNews(result);
+            setIsLoading(false);
+        }
       }
-      useEffect(()=>getNewsInfo, []);
+      useEffect(()=>{
+        getNewsData()
+    }, []);
     return ( 
     <div className="container_wrapper">
         <div className="container_wrapper_block"></div>

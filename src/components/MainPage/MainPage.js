@@ -24,8 +24,8 @@ export function MainPage ({setNumber}) {
                 onClick={()=>setOpenModal(true)}
                 className="main-page_image"><h2>Стань клиентом "Беларусбанк" прямо сейчас!</h2></div>
             </div>
-            <div className="right-block">
-                <News setNumber={setNumber} width={40+'%'}/>
+            <div className="right-block">   
+                <News setNumber={setNumber} width={40+'%'}/>                      
                 <News setNumber={setNumber}  width={40+'%'}/>
                 <News setNumber={setNumber}  width={40+'%'}/>
                 <News setNumber={setNumber}  width={40+'%'}/>

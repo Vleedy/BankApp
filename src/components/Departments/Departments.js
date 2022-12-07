@@ -10,12 +10,12 @@ import './Departments.sass';
 
 
 
-export function Departments () {
-    const [fullInfo, setFullInfo] = useState([]); 
-    const [selectedCity, setSelectedCity] = useState(null);
-    const [selectedCityDepartments, setSelectedCityDepartments] = useState(null);
-    const [itemForModal, setItemForModal] = useState(null);
-    const [showModal ,setShowModal] = useState(false);
+export function Departments () {   
+    const [fullInfo, setFullInfo] = useState([]);  /*Полученный с сервера и преобразованный массив информации*/
+    const [selectedCity, setSelectedCity] = useState(null); /*выбранный город по имени которого фильтруется массив инфориации и выдаются все отделения этого города*/
+    const [selectedCityDepartments, setSelectedCityDepartments] = useState(null); /*стейт для отделений выбранного города*/
+    const [itemForModal, setItemForModal] = useState(null); /*При клике "подробнее" сюда кладётся информация о конкретном отделении, которая дальше идёт в модалку*/
+    const [showModal ,setShowModal] = useState(false); /*Показать модалку с подробной инфой об отделении?*/
     const [isLoading, setIsLoading] = useState(true);
     
     const changeItemForModal = (element) => {
