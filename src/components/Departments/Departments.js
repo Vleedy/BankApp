@@ -26,8 +26,7 @@ export function Departments () {
     
     const getDepartmentsInfo = async () => {
         const resp = await departmentsInfo.getDepartmentsInfo();
-        const changeResp = await processedCitiesResponse(resp);
-        setFullInfo(changeResp);
+        setFullInfo(resp);
         setIsLoading(false)
      }
 

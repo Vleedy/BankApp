@@ -69,7 +69,7 @@ export function normWorkTime (item) {
 }
 
 export function changeAtms(resp) {
-    return resp.Data.ATM.map(item=> {
+    return resp.map(item=> {
         return {
             'currency': item.currency,
             'cards': item.cards,

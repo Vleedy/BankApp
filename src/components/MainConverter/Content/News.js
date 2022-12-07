@@ -22,7 +22,7 @@ export function News ({width, height, setNumber, imgWidth}) {
 
     useEffect(()=>{
         getNewsInfo()
-        setRandom(()=>(0 + (Math.random() * (200-0))).toFixed())
+        setRandom(()=>(0 + (Math.random() * (19-0))).toFixed())
     }, [] )
     return (
         <div style={{height: '260px', width: width, marginTop: 0, marginBottom: '20px' }} className="news_wrapper">

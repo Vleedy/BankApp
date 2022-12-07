@@ -11,7 +11,7 @@ export const currencyInfo = {               /*запрос курса валют
 
 export const newsInfo = {               /*запрос новостей от сервера */
     getNewsInfo() {
-        return fetch('https://belarusbank.by/api/news_info?lang=ru')
+        return fetch('https://6390727d65ff41831113db83.mockapi.io/news')
         .then(resp=>resp.json())
         .catch(err=>alert(err))
     }
@@ -20,7 +20,7 @@ export const newsInfo = {               /*запрос новостей от с�
 
 export const departmentsInfo = {               /*запрос информации об отделениях от сервера */
     getDepartmentsInfo() {
-        return fetch('https://belarusbank.by/api/filials_info')
+        return fetch('https://6390727d65ff41831113db83.mockapi.io/departments')
         .then(resp=>resp.json())
         .catch(err=>alert(err))
     }
@@ -29,7 +29,7 @@ export const departmentsInfo = {               /*запрос информаци
 
 export const atmsInfo = {
     getAtmsInfo() {
-        return fetch('https://belarusbank.by/open-banking/v1.0/atms')
+        return fetch('https://6390727d65ff41831113db83.mockapi.io/atms')
         .then(resp=>resp.json())
         .catch(err=>alert(err))
     }
