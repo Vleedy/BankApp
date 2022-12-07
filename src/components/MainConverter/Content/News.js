@@ -7,7 +7,7 @@ import { MyTheme } from '../../MyTheme';
 import './News.sass';
 
 
-export function News ({width, height, setNumber, imgWidth}) {
+export function News ({width, setNumber}) {
     const [news, setNews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [random, setRandom] = useState(0);
@@ -31,7 +31,7 @@ export function News ({width, height, setNumber, imgWidth}) {
                 <CircularProgress color="primary" style={{margin: '95px auto'}}/> 
             </ThemeProvider>
             : 
-            <Link onClick={()=>setNumber(random)}  style={{textDecoration: 'none', color: 'white'}} to={`/news:id=${random}`}>
+            <Link onClick={()=>setNumber(random)}  style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news:id=${random}`}>
                 <div className="news">
                     <h3>{news.length>0&&news[random].name_ru}</h3>
                     <img className="news-img" src={news[random].img} alt="news-img"/>
