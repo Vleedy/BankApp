@@ -22,12 +22,11 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/BankApp' element={<MainPage setNumber={setNumber}/>}/>
-        <Route path='/' element={<MainPage setNumber={setNumber}/>}/>
-        <Route path='/converter' element={<MainConverter setNumber={setNumber}/>}/>
-        <Route path='/departments' element={<Departments/>}/>
-        <Route path='/atms' element={<Atms/>}/>
-        <Route path='/news' element={<NewsPage setNumber={setNumber}/>}/>
-        <Route path={`/news:id=${numb}`} element={<SeparateNews num={numb}/>}/>
+        <Route path='/BankApp/converter' element={<MainConverter setNumber={setNumber}/>}/>
+        <Route path='/BankApp/departments' element={<Departments/>}/>
+        <Route path='/BankApp/atms' element={<Atms/>}/>
+        <Route path='/BankApp/news' element={<NewsPage setNumber={setNumber}/>}/>
+        <Route path={`/BankApp/news:id=${numb}`} element={<SeparateNews num={numb}/>}/>
       </Routes>
     </>
   );

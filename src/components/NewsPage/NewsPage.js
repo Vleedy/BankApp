@@ -51,7 +51,7 @@ export function NewsPage ({setNumber}) {
             news.map((item, i)=>{
             if (i<quantity) {
                 return ( 
-                <Link key={i} onClick={()=>setNumber(i)} style={{textDecoration: 'none', color: 'white'}} to={`/news:id=${i}`}>
+                <Link key={i} onClick={()=>setNumber(i)} style={{textDecoration: 'none', color: 'white'}} to={`/BankApp/news:id=${i}`}>
                     <div className='news_item'>
                         <img className='news_image' src={item.img} alt="news-img"/>
                         <h2>{item.name_ru}</h2>
