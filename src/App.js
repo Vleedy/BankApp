@@ -21,6 +21,7 @@ function App() {
     <>
       <Header/>
       <Routes>
+        <Route path='/BankApp' element={<MainPage setNumber={setNumber}/>}/>
         <Route path='/' element={<MainPage setNumber={setNumber}/>}/>
         <Route path='/converter' element={<MainConverter setNumber={setNumber}/>}/>
         <Route path='/departments' element={<Departments/>}/>
