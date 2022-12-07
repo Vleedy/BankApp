@@ -71,7 +71,7 @@ export function MainConverter ({setNumber}) {
           </div>
           <div className="content_wrapper">
             <Today response={response}/>
-            <News imgWidth={'50%'} height={'130px'} setNumber={setNumber}/>
+            <News setNumber={setNumber}/>
           </div>
         </div>
       );

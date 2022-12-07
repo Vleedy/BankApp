@@ -34,15 +34,7 @@ export function News ({width, height, setNumber, imgWidth}) {
             <Link onClick={()=>setNumber(random)}  style={{textDecoration: 'none', color: 'white'}} to={`/news:id=${random}`}>
                 <div className="news">
                     <h3>{news.length>0&&news[random].name_ru}</h3>
-                    <div style={{background: `url(${news[random].img})`, 
-                        height: height,   
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPositionX: 'center',
-                        backgroundPositionY: 'center',
-                        backgroundSize: 'cover',
-                        width: imgWidth,
-                        borderRadius: '8px'}}>       
-                </div>
+                    <img className="news-img" src={news[random].img} alt="news-img"/>
             </div>
             </Link>}
         </div>

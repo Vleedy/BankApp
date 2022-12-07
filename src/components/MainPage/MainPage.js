@@ -25,10 +25,10 @@ export function MainPage ({setNumber}) {
                 className="main-page_image"><h2>Стань клиентом "Беларусбанк" прямо сейчас!</h2></div>
             </div>
             <div className="right-block">
-                <News imgWidth={'90%'} height={'145px'} setNumber={setNumber} width={40+'%'}/>
-                <News imgWidth={'90%'} height={'145px'} setNumber={setNumber}  width={40+'%'}/>
-                <News imgWidth={'90%'} height={'145px'} setNumber={setNumber}  width={40+'%'}/>
-                <News imgWidth={'90%'} height={'145px'} setNumber={setNumber}  width={40+'%'}/>
+                <News setNumber={setNumber} width={40+'%'}/>
+                <News setNumber={setNumber}  width={40+'%'}/>
+                <News setNumber={setNumber}  width={40+'%'}/>
+                <News setNumber={setNumber}  width={40+'%'}/>
             </div>
             {openModal&&<CallMeModal openModal={openModal} setOpenModal={setOpenModal} setOpenAlert={setOpenAlert}/>}
             {openAlert&&<Success openAlert={openAlert} setOpenAlert={setOpenAlert}/>}
